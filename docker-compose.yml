@@ -1,0 +1,16 @@
+version: '3'
+
+services: 
+  rancher:
+    build:
+      context: ./rancher
+    profile: ["k8s"]
+    restart: on-failure
+    ports: 
+      - 8080:8080
+    networks: 
+      - backend
+      
+networks: 
+  backend:
+    driver: bridge
