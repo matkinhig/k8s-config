@@ -4,10 +4,11 @@ services:
   rancher:
     build:
       context: ./rancher
-    profile: ["k8s"]
     restart: on-failure
     ports: 
       - 8080:8080
+      - 80:80
+      - 443:443
     networks: 
       - backend
       
