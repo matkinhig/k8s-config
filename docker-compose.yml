@@ -5,6 +5,7 @@ services:
     build:
       context: ./rancher
     restart: on-failure
+    privileged: true
     ports: 
       - 8080:8080
       - 80:80
