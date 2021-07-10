@@ -4,7 +4,7 @@ services:
   rancher:
     build:
       context: ./rancher
-    restart: on-failure
+    restart: unless-stopped
     privileged: true
     ports: 
       - 80:80
